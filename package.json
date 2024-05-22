@@ -1,0 +1,31 @@
+{
+  "name": "edje-spinner-react",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "delete-spinner": "npx rimraf public/edje-spinner",
+    "make-spinner": "mkdirp public/edje-spinner",
+    "copy-spinner": "cp node_modules/edje-spinner/dist/*.* public/edje-spinner",
+    "process-spinner": "npm run delete-spinner && npm run make-spinner && npm run copy-spinner",
+    "dev": "npm run process-spinner && next dev",
+    "build": "npm run process-spinner && next build",
+    "start": "npm run process-spinner && next start",
+    "lint": "npm run process-spinner && next lint"
+  },
+  "dependencies": {
+    "copy-webpack-plugin": "^12.0.2",
+    "edje-spinner": "github:bob-fornal/edje-spinner",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "typescript": "^5"
+  }
+}

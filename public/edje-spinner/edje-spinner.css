@@ -1,0 +1,124 @@
+edje-spinner::part(container) {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 100000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+edje-spinner::part(edje-spinner--normal-image--extra-small-size) {
+  max-height: 200px;
+  max-width: 200px;
+  height: max(200px, calc(100vh * 0.22));
+}
+edje-spinner::part(edje-spinner--normal-image--small-size) {
+  max-height: 300px;
+  max-width: 300px;
+  height: max(300px, calc(100vh * 0.33));
+}
+edje-spinner::part(edje-spinner--normal-image--medium-size) {
+  max-height: 400px;
+  max-width: 400px;
+  height: max(400px, calc(100vh * 0.44));
+}
+edje-spinner::part(edje-spinner--normal-image--large-size) {
+  max-height: 500px;
+  max-width: 500px;
+  height: max(500px, calc(100vh * 0.55));
+}
+edje-spinner::part(edje-spinner--normal-image--extra-large-size) {
+  max-height: 600px;
+  max-width: 600px;
+  height: max(600px, calc(100vh * 0.66));
+}
+
+edje-spinner::part(edje-spinner--round-image--extra-small-size) {
+  max-height: 100px;
+  max-width: 100px;
+  height: max(100px, calc(100vh * 0.11));
+}
+edje-spinner::part(edje-spinner--round-image--small-size) {
+  max-height: 200px;
+  max-width: 200px;
+  height: max(200px, calc(100vh * 0.22));
+}
+edje-spinner::part(edje-spinner--round-image--medium-size) {
+  max-height: 300px;
+  max-width: 300px;
+  height: max(300px, calc(100vh * 0.33));
+}
+edje-spinner::part(edje-spinner--round-image--large-size) {
+  max-height: 400px;
+  max-width: 400px;
+  height: max(400px, calc(100vh * 0.44));
+}
+edje-spinner::part(edje-spinner--round-image--extra-large-size) {
+  max-height: 500px;
+  max-width: 500px;
+  height: max(500px, calc(100vh * 0.55));
+}
+
+edje-spinner::part(spinner-loading) {
+  animation: 4s linear infinite edje-spinner-keyframes;
+}
+edje-spinner::part(spinner-background) {
+  z-index: 1;
+}
+
+edje-spinner::part(round--extra-small-size),
+edje-spinner::part(round--extra-small-size)::after {
+  border-radius: 50%;
+  width: calc(max(100px, calc(100vh * 0.11) + 50px));
+  height: calc(max(100px, calc(100vh * 0.11) + 50px));
+}
+edje-spinner::part(round--small-size),
+edje-spinner::part(round--small-size)::after {
+  border-radius: 50%;
+  width: calc(max(200px, calc(100vh * 0.22) + 70px));
+  height: calc(max(200px, calc(100vh * 0.22) + 70px));
+}
+edje-spinner::part(round--medium-size),
+edje-spinner::part(round--medium-size)::after {
+  border-radius: 50%;
+  width: calc(max(300px, calc(100vh * 0.33) + 90px));
+  height: calc(max(300px, calc(100vh * 0.33) + 90px));
+}
+edje-spinner::part(round--large-size),
+edje-spinner::part(round--large-size)::after {
+  border-radius: 50%;
+  width: calc(max(400px, calc(100vh * 0.44) + 110px));
+  height: calc(max(400px, calc(100vh * 0.44) + 110px));
+}
+edje-spinner::part(round--extra-large-size),
+edje-spinner::part(round--extra-large-size)::after {
+  border-radius: 50%;
+  width: calc(max(500px, calc(100vh * 0.55) + 130px));
+  height: calc(max(500px, calc(100vh * 0.55) + 130px));
+}
+
+edje-spinner::part(round--extra-small-size),
+edje-spinner::part(round--small-size),
+edje-spinner::part(round--medium-size),
+edje-spinner::part(round--large-size),
+edje-spinner::part(round--extra-large-size) {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  font-size: 10px;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid #97C93F;
+  border-bottom: 1.1em solid #97C93F;
+  border-left: 1.1em solid #97C93F;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: edje-spinner-load-round 2s infinite linear;
+  animation: edje-spinner-load-round 2s infinite linear;
+}

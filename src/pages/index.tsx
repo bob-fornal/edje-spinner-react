@@ -36,7 +36,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-      <Script src="/edje-spinner/edje-spinner.min.js" />
+        <Script src="/edje-spinner/edje-spinner.min.js" />
         <edje-spinner active={active.toString()} debug="true"></edje-spinner>
         <div style={{ position: 'relative', zIndex: 200000 }}>
           <button onClick={toggleActive}>Active</button>
